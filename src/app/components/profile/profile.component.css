@@ -1,0 +1,101 @@
+.cont {
+  position: relative;
+  width: 380px;
+  height: 420px;
+  margin: auto;
+  background-color: #212121;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.cont::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+  transform-origin: bottom right;
+  animation: anime 6s linear infinite;
+}
+.cont::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+  transform-origin: bottom right;
+  animation: anime 6s linear infinite;
+  animation-delay: -3s;
+}
+.user-info {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  z-index: 8;
+  inset: 2px;
+  background-color: #28292d;
+  align-items: end;
+}
+.user-info h1 {
+  width: 100%;
+  color: #45f3ff;
+  text-align: center;
+}
+.user-info hr {
+  width: 100%;
+  margin: 10px auto;
+  border: 1px solid #45f3ff;
+}
+table {
+  border-collapse: collapse;
+  width: 70%;
+  margin: 25px auto;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+table thead tr {
+  background: #45f3ff;
+  color: #28292d;
+  text-align: left;
+  font-weight: bold;
+  transition: 0.5s;
+}
+table th,
+table td {
+  padding: 12px 15px;
+}
+table td .btn {
+  margin: 5px;
+}
+table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+table tbody tr:nth-of-type(even) {
+  background: #f3f3f3;
+}
+table tbody tr:nth-of-type(odd) {
+  background: #19494c;
+  color: #fff;
+}
+table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+table tbody tr:hover {
+  font-weight: bold;
+  color: #009879;
+}
+@keyframes anime {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

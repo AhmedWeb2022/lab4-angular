@@ -1,0 +1,33 @@
+<div class="reg">
+  <div class="reg-input">
+    <h2>Add Student</h2>
+    <form [formGroup]="formValidation" action="">
+      <div class="checkbox">
+        <input #name formControlName="name" type="text" name="name" />
+        <span>Name</span>
+        <i></i>
+        <div *ngIf="!nameValid" class="name-error">Name Not Valid</div>
+      </div>
+      <div class="checkbox">
+        <input #email formControlName="email" type="email" name="email" />
+        <span>Email</span>
+        <i></i>
+        <div *ngIf="!emailValid" class="name-error">Email Not Valid</div>
+      </div>
+      <div class="checkbox">
+        <input #age formControlName="age" type="number" name="age" />
+        <span>Age</span>
+        <i></i>
+        <div *ngIf="!ageValid" class="name-error">Age Not Valid</div>
+      </div>
+
+      <input
+        type="submit"
+        value="submit"
+        (click)="sendData(name.value, email.value, +age.value)"
+        name="submit"
+        class="sub"
+      />
+    </form>
+  </div>
+</div>
